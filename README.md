@@ -1,0 +1,2 @@
+# WdgM
+Watchdog manager submodule
