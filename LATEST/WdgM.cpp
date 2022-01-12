@@ -2,6 +2,6 @@
 
 class_WdgM WdgM;
 
-void class_WdgM::InitFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM::InitFunction(void){
 }
 
