@@ -8,6 +8,8 @@
 /*****************************************************/
 #include "WdgM.h"
 
+#include "WdgM_EcuM.h"
+
 /*****************************************************/
 /* #DEFINES                                          */
 /*****************************************************/
@@ -31,15 +33,17 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
+class_WdgM_EcuM WdgM_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_WdgM = &WdgM_EcuM;
 class_WdgM WdgM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, WDGM_CODE) class_WdgM::InitFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM_EcuM::InitFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::DeInitFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM_EcuM::DeInitFunction(void){
 }
 
 FUNC(void, WDGM_CODE) class_WdgM::GetVersionInfo(void){

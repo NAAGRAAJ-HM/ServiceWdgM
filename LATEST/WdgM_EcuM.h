@@ -1,14 +1,15 @@
 #pragma once
 /*****************************************************/
-/* File   : WdgM.h                                   */
+/* File   : WdgM_EcuM.h                              */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Std_Types.h"
 #include "Compiler_Cfg_WdgM.h"
+
+#include "EcuM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -21,20 +22,13 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_WdgM{
+class class_WdgM_EcuM : public class_EcuM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, WDGM_CODE) GetVersionInfo      (void);
-      FUNC(void, WDGM_CODE) GetMode             (void);
-      FUNC(void, WDGM_CODE) SetMode             (void);
-      FUNC(void, WDGM_CODE) CheckpointReached   (void);
-      FUNC(void, WDGM_CODE) GetGlobalStatus     (void);
-      FUNC(void, WDGM_CODE) GetLocalStatus      (void);
-      FUNC(void, WDGM_CODE) PerformReset        (void);
-      FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
-      FUNC(void, WDGM_CODE) MainFunction        (void);
+      FUNC(void, WDGM_CODE) InitFunction   (void);
+      FUNC(void, WDGM_CODE) DeInitFunction (void);
 };
 
 /*****************************************************/
@@ -48,7 +42,7 @@ class class_WdgM{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_WdgM WdgM;
+extern class_EcuM_Client *EcuM_Client_ptr_WdgM;
 
 /*****************************************************/
 /* EOF                                               */
