@@ -34,7 +34,6 @@ class class_WdgM{
       FUNC(void, WDGM_CODE) GetLocalStatus      (void);
       FUNC(void, WDGM_CODE) PerformReset        (void);
       FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
-      FUNC(void, WDGM_CODE) MainFunction        (void);
 };
 
 /*****************************************************/
