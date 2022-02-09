@@ -36,22 +36,25 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_WdgM_EcuM WdgM_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_WdgM = &WdgM_EcuM;
-class_WdgM_SchM WdgM_SchM;
-class_SchM_Client *SchM_Client_ptr_WdgM = &WdgM_SchM;
+class_WdgM_EcuM_Init WdgM_EcuM_Init;
+class_WdgM_EcuM_DeInit WdgM_EcuM_DeInit;
+class_WdgM_SchM_Main WdgM_SchM_Main;
 class_WdgM WdgM;
+
+class_EcuM_Init_Client *EcuM_Init_Client_ptr_WdgM = &WdgM_EcuM_Init;
+class_EcuM_DeInit_Client *EcuM_DeInit_Client_ptr_WdgM = &WdgM_EcuM_DeInit;
+class_SchM_Main_Client *SchM_Main_Client_ptr_WdgM = &WdgM_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, WDGM_CODE) class_WdgM_EcuM::InitFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM_EcuM_Init::InitFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_EcuM::DeInitFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM_EcuM_DeInit::DeInitFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_SchM::MainFunction(void){
+FUNC(void, WDGM_CODE) class_WdgM_SchM_Main::MainFunction(void){
 }
 
 FUNC(void, WDGM_CODE) class_WdgM::GetVersionInfo(void){
