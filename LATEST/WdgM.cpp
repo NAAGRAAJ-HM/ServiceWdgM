@@ -6,15 +6,12 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "WdgM.h"
+#include "module.h"
 
-#include "WdgM_EcuM.h"
-#include "WdgM_SchM.h"
+#include "WdgM_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
-/*****************************************************/
-
 /*****************************************************/
 
 /*****************************************************/
@@ -24,6 +21,12 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class module_WdgM : public class_module{
+   public:
+      FUNC(void, WDGM_CODE) InitFunction   (void);
+      FUNC(void, WDGM_CODE) DeInitFunction (void);
+      FUNC(void, WDGM_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -36,49 +39,45 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_WdgM_EcuM_Init WdgM_EcuM_Init;
-class_WdgM_EcuM_DeInit WdgM_EcuM_DeInit;
-class_WdgM_SchM_Main WdgM_SchM_Main;
-class_WdgM WdgM;
+module_WdgM WdgM;
 
-class_EcuM_Init_Client *EcuM_Init_Client_ptr_WdgM = &WdgM_EcuM_Init;
-class_EcuM_DeInit_Client *EcuM_DeInit_Client_ptr_WdgM = &WdgM_EcuM_DeInit;
-class_SchM_Main_Client *SchM_Main_Client_ptr_WdgM = &WdgM_SchM_Main;
+class_EcuM_Client *EcuM_Client_ptr_WdgM = &WdgM;
+class_SchM_Client *SchM_Client_ptr_WdgM = &WdgM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, WDGM_CODE) class_WdgM_EcuM_Init::InitFunction(void){
+FUNC(void, WDGM_CODE) module_WdgM::InitFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_EcuM_DeInit::DeInitFunction(void){
+FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_SchM_Main::MainFunction(void){
+FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::GetVersionInfo(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::GetVersionInfo(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::GetMode(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::GetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::SetMode(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::SetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::CheckpointReached(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::CheckpointReached(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::GetGlobalStatus(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::GetGlobalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::GetLocalStatus(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::GetLocalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::PerformReset(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::PerformReset(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM::GetFirstExpiredSEID(void){
+FUNC(void, WDGM_CODE) class_WdgM_Unused::GetFirstExpiredSEID(void){
 }
 
 /*****************************************************/
