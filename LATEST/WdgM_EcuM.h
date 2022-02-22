@@ -22,7 +22,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_WdgM_EcuM : public class_EcuM_Client{
+class interface_WdgM_EcuM : public interface_EcuM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -42,7 +42,7 @@ class class_WdgM_EcuM : public class_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_EcuM_Client *EcuM_Client_ptr_WdgM;
+extern interface_WdgM_EcuM *EcuM_Client_ptr_WdgM;
 
 /*****************************************************/
 /* EOF                                               */

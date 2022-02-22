@@ -22,7 +22,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_WdgM_SchM : public class_SchM_Client{
+class interface_WdgM_SchM : public interface_SchM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -41,7 +41,7 @@ class class_WdgM_SchM : public class_SchM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_SchM_Client *SchM_Client_ptr_WdgM;
+extern interface_WdgM_SchM *SchM_Client_ptr_WdgM;
 
 /*****************************************************/
 /* EOF                                               */

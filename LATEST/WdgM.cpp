@@ -7,7 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-
+#include "WdgM_EcuM.h"
+#include "WdgM_SchM.h"
 #include "WdgM_Unused.h"
 
 /*****************************************************/
@@ -21,7 +22,11 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_WdgM : public class_module{
+class module_WdgM:
+      public abstract_module
+   ,  public interface_WdgM_EcuM
+   ,  public interface_WdgM_SchM
+{
    public:
       FUNC(void, WDGM_CODE) InitFunction   (void);
       FUNC(void, WDGM_CODE) DeInitFunction (void);
@@ -41,8 +46,8 @@ class module_WdgM : public class_module{
 /*****************************************************/
 module_WdgM WdgM;
 
-class_EcuM_Client *EcuM_Client_ptr_WdgM = &WdgM;
-class_SchM_Client *SchM_Client_ptr_WdgM = &WdgM;
+interface_WdgM_EcuM *EcuM_Client_ptr_WdgM = &WdgM;
+interface_WdgM_SchM *SchM_Client_ptr_WdgM = &WdgM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
