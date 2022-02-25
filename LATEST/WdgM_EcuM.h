@@ -27,8 +27,8 @@ class interface_WdgM_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, WDGM_CODE) InitFunction   (void);
-      FUNC(void, WDGM_CODE) DeInitFunction (void);
+      virtual FUNC(void, WDGM_CODE) InitFunction   (void) = 0;
+      virtual FUNC(void, WDGM_CODE) DeInitFunction (void) = 0;
 };
 
 /*****************************************************/
