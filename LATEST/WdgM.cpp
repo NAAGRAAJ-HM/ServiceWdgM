@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "WdgM_EcuM.h"
-#include "WdgM_SchM.h"
+#include "infWdgM_EcuM.h"
+#include "infWdgM_SchM.h"
 #include "WdgM_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_WdgM:
    public:
       FUNC(void, WDGM_CODE) InitFunction   (void);
       FUNC(void, WDGM_CODE) DeInitFunction (void);
+      FUNC(void, WDGM_CODE) GetVersionInfo (void);
       FUNC(void, WDGM_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_WdgM:
 /*****************************************************/
 module_WdgM    WdgM;
 infEcuMClient* gptrinfEcuMClient_WdgM = &WdgM;
+infDcmClient*  gptrinfDcmClient_WdgM  = &WdgM;
 infSchMClient* gptrinfSchMClient_WdgM = &WdgM;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(void){
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
+}
+
+FUNC(void, WDGM_CODE) module_WdgM::GetVersionInfo(void){
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
