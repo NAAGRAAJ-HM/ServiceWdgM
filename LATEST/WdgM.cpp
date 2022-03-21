@@ -6,9 +6,8 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "infWdgM_Version.h"
-
 #include "module.h"
+#include "infWdgM_Version.h"
 #include "infWdgM_EcuM.h"
 #include "infWdgM_Dcm.h"
 #include "infWdgM_SchM.h"
@@ -45,31 +44,20 @@ class module_WdgM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-
-/******************************************************************************/
-/* FUNCTIONS                                                                  */
-/******************************************************************************/
-
-/******************************************************************************/
-/* EOF                                                                        */
-/******************************************************************************/
-
-
-/*****************************************************/
-/* OBJECTS                                           */
-/*****************************************************/
 VAR(module_WdgM, WDGM_VAR) WdgM;
 CONSTP2VAR(infEcuMClient, WDGM_VAR, WDGM_CONST) gptrinfEcuMClient_WdgM = &WdgM;
 CONSTP2VAR(infDcmClient,  WDGM_VAR, WDGM_CONST) gptrinfDcmClient_WdgM  = &WdgM;
 CONSTP2VAR(infSchMClient, WDGM_VAR, WDGM_CONST) gptrinfSchMClient_WdgM = &WdgM;
 
-/*****************************************************/
-/* FUNCTIONS                                         */
-/*****************************************************/
+/******************************************************************************/
+/* FUNCTIONS                                                                  */
+/******************************************************************************/
 FUNC(void, WDGM_CODE) module_WdgM::InitFunction(void){
+   WdgM.IsInitDone = E_OK;
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
+   WdgM.IsInitDone = E_NOT_OK;
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::GetVersionInfo(void){
@@ -101,7 +89,7 @@ FUNC(void, WDGM_CODE) class_WdgM_Unused::PerformReset(void){
 FUNC(void, WDGM_CODE) class_WdgM_Unused::GetFirstExpiredSEID(void){
 }
 
-/*****************************************************/
-/* EOF                                               */
-/*****************************************************/
+/******************************************************************************/
+/* EOF                                                                        */
+/******************************************************************************/
 
