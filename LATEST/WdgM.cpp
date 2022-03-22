@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infWdgM_Version.h"
+#include "WdgM_Cfg.h"
 #include "infWdgM_EcuM.h"
 #include "infWdgM_Dcm.h"
 #include "infWdgM_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define WDGM_AR_RELEASE_MAJOR_VERSION                                          4
+#define WDGM_AR_RELEASE_MINOR_VERSION                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(WDGM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible WDGM_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(WDGM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible WDGM_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::GetVersionInfo(void){
+#if(STD_ON == WdgM_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
