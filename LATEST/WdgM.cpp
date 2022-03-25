@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgWdgM.h"
-#include "infWdgM_EcuM.h"
-#include "infWdgM_Dcm.h"
-#include "infWdgM_SchM.h"
+#include "module.hpp"
+#include "CfgWdgM.hpp"
+#include "infWdgM_EcuM.hpp"
+#include "infWdgM_Dcm.hpp"
+#include "infWdgM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, WDGM_CODE) module_WdgM::GetVersionInfo(void){
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 }
 
-#include "WdgM_Unused.h"
+#include "WdgM_Unused.hpp"
 
 FUNC(void, WDGM_CODE) class_WdgM_Unused::GetMode(void){
 }
