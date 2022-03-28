@@ -90,7 +90,16 @@ FUNC(void, WDGM_CODE) module_WdgM::GetVersionInfo(void){
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 }
 
-#include "WdgM_Unused.hpp"
+class class_WdgM_Unused{
+   public:
+      FUNC(void, WDGM_CODE) GetMode             (void);
+      FUNC(void, WDGM_CODE) SetMode             (void);
+      FUNC(void, WDGM_CODE) CheckpointReached   (void);
+      FUNC(void, WDGM_CODE) GetGlobalStatus     (void);
+      FUNC(void, WDGM_CODE) GetLocalStatus      (void);
+      FUNC(void, WDGM_CODE) PerformReset        (void);
+      FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
+};
 
 FUNC(void, WDGM_CODE) class_WdgM_Unused::GetMode(void){
 }
