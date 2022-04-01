@@ -78,6 +78,7 @@ VAR(module_WdgM, WDGM_VAR) WdgM(
 FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == WdgM_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == WdgM_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == WdgM_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
 // use PBcfg_WdgM as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == WdgM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
+#if(STD_ON == WdgM_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == WdgM_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == WdgM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
+#if(STD_ON == WdgM_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == WdgM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == WdgM_InitCheck)
+   }
+#endif
 }
 
 class class_WdgM_Unused{
