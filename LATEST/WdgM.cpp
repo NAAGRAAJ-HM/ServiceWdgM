@@ -31,8 +31,20 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_WdgM_Functionality{
+   public:
+      FUNC(void, WDGM_CODE) GetMode             (void);
+      FUNC(void, WDGM_CODE) SetMode             (void);
+      FUNC(void, WDGM_CODE) CheckpointReached   (void);
+      FUNC(void, WDGM_CODE) GetGlobalStatus     (void);
+      FUNC(void, WDGM_CODE) GetLocalStatus      (void);
+      FUNC(void, WDGM_CODE) PerformReset        (void);
+      FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
+};
+
 class module_WdgM:
       public abstract_module
+   ,  public class_WdgM_Functionality
 {
    public:
       module_WdgM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +96,10 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == WdgM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +108,10 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == WdgM_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +136,10 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == WdgM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +156,10 @@ FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == WdgM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -142,36 +170,25 @@ FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 #endif
 }
 
-class class_WdgM_Unused{
-   public:
-      FUNC(void, WDGM_CODE) GetMode             (void);
-      FUNC(void, WDGM_CODE) SetMode             (void);
-      FUNC(void, WDGM_CODE) CheckpointReached   (void);
-      FUNC(void, WDGM_CODE) GetGlobalStatus     (void);
-      FUNC(void, WDGM_CODE) GetLocalStatus      (void);
-      FUNC(void, WDGM_CODE) PerformReset        (void);
-      FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
-};
-
-FUNC(void, WDGM_CODE) class_WdgM_Unused::GetMode(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::SetMode(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::SetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::CheckpointReached(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::CheckpointReached(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::GetGlobalStatus(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetGlobalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::GetLocalStatus(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetLocalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::PerformReset(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::PerformReset(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Unused::GetFirstExpiredSEID(void){
+FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetFirstExpiredSEID(void){
 }
 
 /******************************************************************************/
