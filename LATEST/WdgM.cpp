@@ -31,17 +31,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class class_WdgM_Functionality{
-   public:
-      FUNC(void, WDGM_CODE) GetMode             (void);
-      FUNC(void, WDGM_CODE) SetMode             (void);
-      FUNC(void, WDGM_CODE) CheckpointReached   (void);
-      FUNC(void, WDGM_CODE) GetGlobalStatus     (void);
-      FUNC(void, WDGM_CODE) GetLocalStatus      (void);
-      FUNC(void, WDGM_CODE) PerformReset        (void);
-      FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);
-};
-
 class module_WdgM:
       public abstract_module
    ,  public class_WdgM_Functionality
