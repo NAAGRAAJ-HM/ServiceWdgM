@@ -159,25 +159,25 @@ FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 #endif
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetMode(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::SetMode(void){
+FUNC(void, WDGM_CODE) module_WdgM::SetMode(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::CheckpointReached(void){
+FUNC(void, WDGM_CODE) module_WdgM::CheckpointReached(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetGlobalStatus(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetGlobalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetLocalStatus(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetLocalStatus(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::PerformReset(void){
+FUNC(void, WDGM_CODE) module_WdgM::PerformReset(void){
 }
 
-FUNC(void, WDGM_CODE) class_WdgM_Functionality::GetFirstExpiredSEID(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetFirstExpiredSEID(void){
 }
 
 /******************************************************************************/
