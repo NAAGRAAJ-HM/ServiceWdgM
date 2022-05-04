@@ -113,7 +113,7 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  WDGM_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  WDGM_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  WDGM_E_UNINIT
       );
 #endif
    }
