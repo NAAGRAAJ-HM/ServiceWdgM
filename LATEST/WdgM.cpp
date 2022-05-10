@@ -89,7 +89,10 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == WdgM_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
 
 FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 #if(STD_ON == WdgM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == WdgM_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 
 FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 #if(STD_ON == WdgM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == WdgM_InitCheck)
    }
