@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgWdgM.hpp"
 #include "WdgM_core.hpp"
-#include "infWdgM.hpp"
+#include "infWdgM_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_WdgM:
+   INTERFACES_EXPORTED_WDGM
       public abstract_module
    ,  public class_WdgM_Functionality
 {
