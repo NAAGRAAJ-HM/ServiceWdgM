@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_WdgM:
-   INTERFACES_EXPORTED_WDGM
+      INTERFACES_EXPORTED_WDGM
       public abstract_module
    ,  public class_WdgM_Functionality
 {
