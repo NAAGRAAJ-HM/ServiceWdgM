@@ -10,6 +10,7 @@
 #include "CfgWdgM.hpp"
 #include "WdgM_core.hpp"
 #include "infWdgM_Exp.hpp"
+#include "infWdgM_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
