@@ -74,10 +74,10 @@ CONSTP2VAR(infSchMClient, WDGM_VAR, WDGM_CONST) gptrinfSchMClient_WdgM = &WdgM;
 VAR(module_WdgM, WDGM_VAR) WdgM(
    {
 #if(STD_ON == _ReSIM)
-         "WdgM"
+         "WdgM",
 #else
 #endif
-      ,  WDGM_AR_RELEASE_VERSION_MAJOR
+         WDGM_AR_RELEASE_VERSION_MAJOR
       ,  WDGM_AR_RELEASE_VERSION_MINOR
       ,  0x00
       ,  0xFF
