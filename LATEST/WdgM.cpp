@@ -130,7 +130,9 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
+FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(
+   void
+){
 #if(STD_ON == WdgM_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, WDGM_CODE) module_WdgM::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
+FUNC(void, WDGM_CODE) module_WdgM::MainFunction(
+   void
+){
 #if(STD_ON == WdgM_InitCheck)
    if(
          E_OK
@@ -175,25 +179,39 @@ FUNC(void, WDGM_CODE) module_WdgM::MainFunction(void){
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::GetMode(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetMode(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::SetMode(void){
+FUNC(void, WDGM_CODE) module_WdgM::SetMode(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::CheckpointReached(void){
+FUNC(void, WDGM_CODE) module_WdgM::CheckpointReached(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::GetGlobalStatus(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetGlobalStatus(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::GetLocalStatus(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetLocalStatus(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::PerformReset(void){
+FUNC(void, WDGM_CODE) module_WdgM::PerformReset(
+   void
+){
 }
 
-FUNC(void, WDGM_CODE) module_WdgM::GetFirstExpiredSEID(void){
+FUNC(void, WDGM_CODE) module_WdgM::GetFirstExpiredSEID(
+   void
+){
 }
 
 /******************************************************************************/
