@@ -82,12 +82,7 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgWdgM;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == WdgM_DevErrorDetect)
