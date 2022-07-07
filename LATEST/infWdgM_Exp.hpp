@@ -8,9 +8,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "infWdgM_EcuM.hpp"
-#include "infWdgM_Dcm.hpp"
 #include "infWdgM_Det.hpp"
-#include "infWdgM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
