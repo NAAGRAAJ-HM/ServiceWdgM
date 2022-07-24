@@ -48,7 +48,8 @@ VAR(module_WdgM, WDGM_VAR) WdgM;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, WDGM_CONST,       WDGM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == WdgM_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == WdgM_DevErrorDetect)

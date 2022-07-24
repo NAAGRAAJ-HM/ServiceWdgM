@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstWdgM.hpp"
 #include "CfgWdgM.hpp"
 #include "WdgM_core.hpp"
 #include "infWdgM_Exp.hpp"
@@ -31,13 +32,15 @@ class module_WdgM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstWdgM_Type* lptrConst = (ConstWdgM_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, WDGM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, WDGM_CONST,       WDGM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, WDGM_CODE) DeInitFunction (void);
       FUNC(void, WDGM_CODE) MainFunction   (void);
