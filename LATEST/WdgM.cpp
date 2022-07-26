@@ -61,7 +61,7 @@ FUNC(void, WDGM_CODE) module_WdgM::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstWdgM_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
