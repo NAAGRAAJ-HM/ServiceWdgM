@@ -12,23 +12,23 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define WDGM_CORE_FUNCTIONALITIES                                              \
-              FUNC(void, WDGM_CODE) GetMode             (void);                \
-              FUNC(void, WDGM_CODE) SetMode             (void);                \
-              FUNC(void, WDGM_CODE) CheckpointReached   (void);                \
-              FUNC(void, WDGM_CODE) GetGlobalStatus     (void);                \
-              FUNC(void, WDGM_CODE) GetLocalStatus      (void);                \
-              FUNC(void, WDGM_CODE) PerformReset        (void);                \
-              FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void);                \
+#define SERVICEWDGM_CORE_FUNCTIONALITIES                                              \
+              FUNC(void, SERVICEWDGM_CODE) GetMode             (void);                \
+              FUNC(void, SERVICEWDGM_CODE) SetMode             (void);                \
+              FUNC(void, SERVICEWDGM_CODE) CheckpointReached   (void);                \
+              FUNC(void, SERVICEWDGM_CODE) GetGlobalStatus     (void);                \
+              FUNC(void, SERVICEWDGM_CODE) GetLocalStatus      (void);                \
+              FUNC(void, SERVICEWDGM_CODE) PerformReset        (void);                \
+              FUNC(void, SERVICEWDGM_CODE) GetFirstExpiredSEID (void);                \
 
-#define WDGM_CORE_FUNCTIONALITIES_VIRTUAL                                      \
-      virtual FUNC(void, WDGM_CODE) GetMode             (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) SetMode             (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) CheckpointReached   (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) GetGlobalStatus     (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) GetLocalStatus      (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) PerformReset        (void) = 0;            \
-      virtual FUNC(void, WDGM_CODE) GetFirstExpiredSEID (void) = 0;            \
+#define SERVICEWDGM_CORE_FUNCTIONALITIES_VIRTUAL                                      \
+      virtual FUNC(void, SERVICEWDGM_CODE) GetMode             (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) SetMode             (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) CheckpointReached   (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) GetGlobalStatus     (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) GetLocalStatus      (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) PerformReset        (void) = 0;            \
+      virtual FUNC(void, SERVICEWDGM_CODE) GetFirstExpiredSEID (void) = 0;            \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -39,7 +39,7 @@
 /******************************************************************************/
 class class_ServiceWdgM_Functionality{
    public:
-      WDGM_CORE_FUNCTIONALITIES_VIRTUAL
+      SERVICEWDGM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/

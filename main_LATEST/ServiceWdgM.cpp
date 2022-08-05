@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define WDGM_AR_RELEASE_VERSION_MAJOR                                          4
-#define WDGM_AR_RELEASE_VERSION_MINOR                                          3
+#define SERVICEWDGM_AR_RELEASE_VERSION_MAJOR                                          4
+#define SERVICEWDGM_AR_RELEASE_VERSION_MINOR                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(WDGM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible WDGM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICEWDGM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICEWDGM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(WDGM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible WDGM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICEWDGM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICEWDGM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceWdgM, WDGM_VAR) ServiceWdgM;
+VAR(module_ServiceWdgM, SERVICEWDGM_VAR) ServiceWdgM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, WDGM_CODE) module_ServiceWdgM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, WDGM_CONST,       WDGM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   WDGM_CONFIG_DATA, WDGM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEWDGM_CONFIG_DATA, SERVICEWDGM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceWdgM_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, WDGM_CODE) module_ServiceWdgM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  WDGM_E_UNINIT
+         ,  SERVICEWDGM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::DeInitFunction(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceWdgM_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, WDGM_CODE) module_ServiceWdgM::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  WDGM_E_UNINIT
+         ,  SERVICEWDGM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::MainFunction(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::MainFunction(
    void
 ){
 #if(STD_ON == ServiceWdgM_InitCheck)
@@ -132,44 +132,44 @@ FUNC(void, WDGM_CODE) module_ServiceWdgM::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  WDGM_E_UNINIT
+         ,  SERVICEWDGM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::GetMode(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::GetMode(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::SetMode(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::SetMode(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::CheckpointReached(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::CheckpointReached(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::GetGlobalStatus(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::GetGlobalStatus(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::GetLocalStatus(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::GetLocalStatus(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::PerformReset(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::PerformReset(
    void
 ){
 }
 
-FUNC(void, WDGM_CODE) module_ServiceWdgM::GetFirstExpiredSEID(
+FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::GetFirstExpiredSEID(
    void
 ){
 }

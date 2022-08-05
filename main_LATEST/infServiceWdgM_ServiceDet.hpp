@@ -21,7 +21,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 typedef enum{
-      WDGM_E_UNINIT
+      SERVICEWDGM_E_UNINIT
 }ServiceWdgM_TypeServiceDetErrorCode;
 
 /******************************************************************************/
