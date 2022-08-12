@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceWdgM:
-      INTERFACES_EXMCALPORTED_SERVICEWDGM
+      INTERFACES_EXPORTED_SERVICEWDGM
       public abstract_module
    ,  public class_ServiceWdgM_Functionality
 {

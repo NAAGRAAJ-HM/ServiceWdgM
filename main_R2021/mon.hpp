@@ -1,18 +1,21 @@
 #pragma once
 /******************************************************************************/
-/* File   : infServiceWdgM_Exp.hpp                                                   */
+/* File   : Template.hpp                                                      */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "infServiceWdgM_ServiceDet.hpp"
+//#include "tle987x.hpp"
+//#include "types.hpp"
+//#include "sfr_access.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define INTERFACES_EXPORTED_SERVICEWDGM
+#define MON_STATUS_LOW (0U)
+#define MON_STATUS_HIGH (1U)
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -37,6 +40,28 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
+extern void  MON_Init                 (void);
+extern uint8 MON_Debounce             (uint8 MonActiveState);
+extern void  MON_Rising_Edge_Int_Clr  (void);
+extern void  MON_Falling_Edge_Int_Clr (void);
+extern void  MON_Rising_Edge_Int_En   (void);
+extern void  MON_Rising_Edge_Int_Dis  (void);
+extern void  MON_Falling_Edge_Int_En  (void);
+extern void  MON_Falling_Edge_Int_Dis (void);
+extern uint8 MON_Sts                  (void);
+extern void  MON_PullUp_En            (void);
+extern void  MON_PullUp_Dis           (void);
+extern void  MON_PullDown_En          (void);
+extern void  MON_PullDown_Dis         (void);
+extern void  MON_CycSense_En          (void);
+extern void  MON_CycSense_Dis         (void);
+extern void  MON_WakeOnRise_En        (void);
+extern void  MON_WakeOnRise_Dis       (void);
+extern void  MON_WakeOnFall_En        (void);
+extern void  MON_WakeOnFall_Dis       (void);
+extern void  MON_En                   (void);
+extern void  MON_Dis                  (void);
+extern uint8 MON_Get_Status           (void);
 
 /******************************************************************************/
 /* EOF                                                                        */
