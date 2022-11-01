@@ -47,6 +47,8 @@ VAR(module_ServiceWdgM, SERVICEWDGM_VAR) ServiceWdgM;
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
+extern void MON_Init(void); //TBD: use interface headers as per architecture
+
 FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::InitFunction(
       CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrConstModule
    ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEWDGM_CONFIG_DATA, SERVICEWDGM_APPL_CONST) lptrCfgModule
@@ -74,6 +76,7 @@ FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::InitFunction(
          );
 #endif
       }
+      MON_Init();
 #if(STD_ON == ServiceWdgM_InitCheck)
       IsInitDone = E_OK;
    }

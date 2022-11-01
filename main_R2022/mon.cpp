@@ -1,5 +1,5 @@
 /******************************************************************************/
-/* File   : Template.hpp                                                      */
+/* File   : mon.cpp                                                           */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -9,14 +9,11 @@
 #include "types.hpp"
 
 #include "mon.hpp"
-
-#include "uC_Mon.hpp"
-
-#include "sfr_access.hpp"
-#include "wdt1.hpp"
-#include "RTE_Components.hpp"
-
 #include "mon_defines.hpp"
+
+#include "wdt1.hpp"
+#include "sfr_access.hpp"
+#include "uC_Mon.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -49,11 +46,7 @@ MON_Type MON = {
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 void MON_Init(void){
-#if(CONFIGWIZARD == 1)
-   MON.CNF.reg = (uint8) MON_CNF;
-#else
    MON.CNF.reg = (uint8) PMU_MON_CNF;
-#endif
 }
 /*
 uint8 MON_Debounce(uint8 MonActiveState){
