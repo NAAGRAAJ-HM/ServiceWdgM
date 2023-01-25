@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceWdgM.hpp                                                          */
+/* File   : ServiceWdgM.hpp                                                   */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceWdgM.hpp"
+#include "infServiceWdgM_ServiceNvM_Types.hpp"
 #include "CfgServiceWdgM.hpp"
 #include "ServiceWdgM_core.hpp"
 #include "infServiceWdgM_Exp.hpp"
