@@ -7,11 +7,8 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CONSTSERVICEWDGM_AR_RELEASE_VERSION_MAJOR                              4
-#define CONSTSERVICEWDGM_AR_RELEASE_VERSION_MINOR                              3
-
-#define Const_DefaultInit_ConstServiceWdgM                                                                               \
-   ,  {CONSTSERVICEWDGM_AR_RELEASE_VERSION_MAJOR, CONSTSERVICEWDGM_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'} \
+#define NvM_InitBlocksRom_ServiceWdgM                                                                          \
+   ,  {SERVICEWDGM_AR_RELEASE_VERSION_MAJOR, SERVICEWDGM_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'} \
 
 /******************************************************************************/
 /* EOF                                                                        */

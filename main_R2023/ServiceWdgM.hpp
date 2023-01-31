@@ -32,14 +32,14 @@ class module_ServiceWdgM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstServiceWdgM_Type* lptrConst = (ConstServiceWdgM_Type*)NULL_PTR;
+      const ConstModule_TypeAbstract* lptrNvMBlocksRom = (ConstModule_TypeAbstract*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, SERVICEWDGM_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrConstModule
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrNvMBlocksRomModule
          ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEWDGM_CONFIG_DATA, SERVICEWDGM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, SERVICEWDGM_CODE) DeInitFunction (void);

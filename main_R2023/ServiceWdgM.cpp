@@ -13,19 +13,10 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define SERVICEWDGM_AR_RELEASE_VERSION_MAJOR                                   4
-#define SERVICEWDGM_AR_RELEASE_VERSION_MINOR                                   3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(SERVICEWDGM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible SERVICEWDGM_AR_RELEASE_VERSION_MAJOR!"
-#endif
-
-#if(SERVICEWDGM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible SERVICEWDGM_AR_RELEASE_VERSION_MINOR!"
-#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -50,7 +41,7 @@ VAR(module_ServiceWdgM, SERVICEWDGM_VAR) ServiceWdgM;
 extern void MON_Init(void); //TBD: use interface headers as per architecture
 
 FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrConstModule
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEWDGM_CONST,       SERVICEWDGM_APPL_CONST) lptrNvMBlocksRomModule
    ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEWDGM_CONFIG_DATA, SERVICEWDGM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceWdgM_InitCheck)
@@ -60,10 +51,10 @@ FUNC(void, SERVICEWDGM_CODE) module_ServiceWdgM::InitFunction(
    ){
 #endif
       if(
-            (NULL_PTR != lptrConstModule)
+            (NULL_PTR != lptrNvMBlocksRomModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = (const ConstServiceWdgM_Type*)lptrConstModule;
+         lptrNvMBlocksRom = lptrNvMBlocksRomModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
